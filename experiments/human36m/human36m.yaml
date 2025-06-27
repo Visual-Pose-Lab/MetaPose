@@ -1,0 +1,68 @@
+title: "human36m"
+kind: "human36m"
+azureroot: ""
+batch_output: true
+
+model:
+  image_shape: [192, 256]
+
+  init_weights: false
+  checkpoint: "/MetaPose/checkpoint/best_epoch.bin"
+
+  image_encoder:
+    type: "hrnet_32"
+    # type: "hrnet_48"
+    num_final_layer_channel: 17
+    num_joints: 17
+    num_layers: 152
+
+    init_weights: true
+    fix_weights: true
+    checkpoint: "data/pretrained/coco/pose_hrnet_w32_256x192.pth"
+
+  pose_net:
+    embed_dim_ratio: 128
+    depth: 4
+    save_inter_feat: false
+
+loss:
+  criterion: "MPJPE"
+  scale_keypoints_3d: 0.1
+  use_volumetric_ce_loss: true
+  volumetric_ce_loss_weight: 0.01
+  use_global_attention_loss: True
+  global_attention_loss_weight: 1000000
+
+dataset:
+  kind: "human36m"
+  data_format: ""
+  image_root: "data/images/"
+  labels_3d_path: "data/data_3d_h36m_uvd.npz"
+  labels_2d_path: "data/data_2d_h36m_hrn_norm.npz"
+  labels_2d_crop_path: "data/data_2d_h36m_hrn_crop.npz"
+  train_subjects: ["S1", "S5", "S6", "S7", "S8"]
+  test_subjects: ["S9", "S11"]
+  actions: "*"
+  input2d_frames: 1
+
+train:
+  n_epochs: 9999
+  batch_size: 400
+  optimizer: "Adam"
+  image_encoder_lr: 0.0
+  image_encoder_lr_step: [1000]
+  image_encoder_lr_factor: 0.1
+  process_features_lr: 0.002
+  # pose_net_lr: 0.00064  # 0.00032 for cpn
+  pose_net_lr: 0.001 # 0.00032 for cpn
+  pose_net_lr_decay: 0.99
+  pose_net_lr_step: [1000]
+  pose_net_lr_factor: 0.5
+  shuffle: true
+  num_workers: 14
+
+val:
+  batch_size: 400
+  flip_test: true
+  shuffle: false
+  num_workers: 14

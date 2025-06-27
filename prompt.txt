@@ -1,0 +1,44 @@
+1. Directions
+"The person is using hand gestures or pointing to give or receive directions, often while standing or walking."
+
+2. Discussion
+"The person is engaged in a conversation with others, often gesturing with hands or making eye contact to emphasize points, typically while standing or sitting."
+
+3. Eating
+"The person is consuming food, using hands, utensils, or a combination of both, typically seated at a table or in a relaxed position."
+
+4. Greeting
+"The person is acknowledging another person with a wave, handshake, or other gesture, often accompanied by eye contact and facial expressions of friendliness."
+
+5. Phoning
+"The person is holding a phone to their ear or speaking into it, often standing or sitting, while engaging in a conversation."
+
+6. Posing
+"The person is assuming a particular posture or stance for a photo or modeling, often holding still for the camera with specific body alignment."
+
+7. Purchases
+"The person is engaging in the act of buying items, typically in a store or market, involving handling items, interacting with a cashier, and making payment."
+
+8. Sitting
+"The person is resting in a seated position, typically with legs bent at the knees and the body supported by a chair, bench, or other surface."
+
+9. SittingDown
+"The person is lowering their body from a standing to a seated position, typically by bending the knees and hips while maintaining balance."
+
+10. Smoking
+"The person is holding a cigarette, cigar, or similar item, and inhaling or exhaling smoke, often in a standing or sitting posture."
+
+11. TakingPhoto
+"The person is holding a camera or smartphone to take a photograph, often adjusting angles or framing to capture an image."
+
+12. Waiting
+"The person is standing or sitting still, often with minimal movement, awaiting something or someone, showing patience or attentiveness."
+
+13. Walking
+"The person is moving at a regular pace on foot, with alternating steps of the legs and arms, typically in a forward direction."
+
+14. WalkDog
+"The person is walking while holding a leash, guiding a dog along a path or through an area, with the dog typically walking beside them."
+
+15. WalkTogether
+"The person is walking alongside another individual or group, moving in sync with others, engaging in casual conversation or simply strolling."
